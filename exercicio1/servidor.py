@@ -61,9 +61,15 @@ def main():
         servidor.listen()
         print(f"Servidor escutando em {args.host}:{args.porta} (Ctrl+C para encerrar)")
 
+        # O accept() desiste a cada 1 segundo. Assim o Ctrl+C é percebido
+        servidor.settimeout(1)
+
         while True:
             # accept() espera um cliente e devolve uma conexão só para ele
-            conexao, endereco = servidor.accept()
+            try:
+                conexao, endereco = servidor.accept()
+            except socket.timeout:
+                continue  # ninguém conectou neste segundo: volta a esperar
 
             # Cria uma thread para esse cliente; a principal volta a esperar outros
             thread = threading.Thread(target=atender_cliente, args=(conexao, endereco), daemon=True)
