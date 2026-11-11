@@ -1,0 +1,7 @@
+# Mantém quebras de linha no padrão Linux (LF) em todos os arquivos de texto
+* text=auto eol=lf
+
+# Capturas e imagens são arquivos binários
+*.pcap binary
+*.pcapng binary
+*.png binary
