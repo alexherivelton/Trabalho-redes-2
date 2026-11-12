@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 2: Servidor Echo UDP (cliente)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Cliente UDP que envia mensagens ao servidor e mostra o eco, até o usuário digitar "sair".
 

@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 1: Cliente-Servidor TCP (cliente)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Cliente TCP que envia mensagens ao servidor até o usuário digitar "sair".
 

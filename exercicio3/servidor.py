@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 3: Chat em Rede TCP (servidor)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Servidor de chat: cada cliente tem uma thread; as mensagens de um cliente
 # são retransmitidas (broadcast) para todos os outros, com o nickname na frente.

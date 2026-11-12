@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 2: Servidor Echo UDP (servidor)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Servidor UDP que devolve (eco) cada mensagem recebida para quem a enviou.
 

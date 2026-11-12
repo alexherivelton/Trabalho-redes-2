@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 4: Servidor de Hora com Threads (servidor)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Servidor TCP multithread que envia a hora atual (HH:MM:SS) a cada cliente que
 # pedir. Mantém um contador thread-safe do total de clientes atendidos, que

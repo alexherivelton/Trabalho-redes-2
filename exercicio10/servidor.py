@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 10: Chat com WebSockets (servidor)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Servidor de chat com WebSockets. Cada mensagem recebida de um cliente é
 # retransmitida (broadcast) para todos os outros, com o nome de quem enviou.

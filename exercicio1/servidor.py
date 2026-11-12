@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 1: Cliente-Servidor TCP (servidor)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Servidor TCP que atende vários clientes ao mesmo tempo (uma thread por cliente).
 

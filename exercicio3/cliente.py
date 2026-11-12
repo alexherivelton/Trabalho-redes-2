@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 3: Chat em Rede TCP (cliente)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Cliente de chat: uma thread fica recebendo as mensagens dos outros
 # enquanto a thread principal lê o que o usuário digita.

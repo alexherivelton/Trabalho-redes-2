@@ -1,6 +1,6 @@
 # Trabalho 2 - Redes de Computadores 2 - UFVJM
 # Exercício 4: Servidor de Hora com Threads (cliente)
-# Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+# Integrantes: Rafael Guimaraes, Álex Herivelton
 
 # Cliente TCP que conecta ao servidor de hora, pede a hora e mostra a resposta.
 
