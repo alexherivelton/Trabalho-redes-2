@@ -1,0 +1,75 @@
+<!--
+  Trabalho 2 - Redes de Computadores 2 - UFVJM
+  Exercício 10: Chat com WebSockets (cliente web)
+  Integrantes: <NOME 1>, <NOME 2>, <NOME 3>
+
+  Página de chat que usa a API WebSocket nativa do navegador.
+  A primeira mensagem enviada ao servidor é o nome; as demais são mensagens do chat.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat WebSocket</title>
+</head>
+<body>
+  <h2>Chat com WebSockets</h2>
+
+  <input id="nome" placeholder="Seu nome">
+  <button onclick="entrar()">Entrar</button>
+
+  <div id="mensagens"></div>
+
+  <input id="texto" placeholder="Mensagem">
+  <button onclick="enviar()">Enviar</button>
+
+  <script>
+    // Endereço do servidor WebSocket
+    const SERVIDOR = "ws://localhost:8765";
+
+    let socket = null;  // a conexão com o servidor
+
+    // Mostra uma linha de texto na área de mensagens
+    function mostrar(texto) {
+      const linha = document.createElement("p");
+      linha.textContent = texto;
+      document.getElementById("mensagens").appendChild(linha);
+    }
+
+    // Conecta ao servidor e envia o nome
+    function entrar() {
+      const nome = document.getElementById("nome").value.trim();
+      if (nome === "") {
+        mostrar("Digite um nome antes de entrar.");
+        return;
+      }
+
+      socket = new WebSocket(SERVIDOR);
+
+      // Conectou: a primeira mensagem é o nome
+      socket.onopen = () => socket.send(nome);
+
+      // Chegou mensagem do servidor: mostra na tela
+      socket.onmessage = (evento) => mostrar(evento.data);
+
+      // Não conseguiu conectar (ex.: servidor desligado)
+      socket.onerror = () => mostrar("Erro: não foi possível conectar ao servidor.");
+
+      // A conexão foi encerrada
+      socket.onclose = () => mostrar("*** Desconectado do servidor ***");
+    }
+
+    // Envia a mensagem digitada
+    function enviar() {
+      const campo = document.getElementById("texto");
+      const texto = campo.value.trim();
+      // Não envia mensagem vazia nem se ainda não estiver conectado
+      if (texto === "" || socket === null || socket.readyState !== WebSocket.OPEN) return;
+
+      socket.send(texto);
+      mostrar("Você: " + texto);  // o servidor não devolve a nossa própria mensagem
+      campo.value = "";
+    }
+  </script>
+</body>
+</html>
